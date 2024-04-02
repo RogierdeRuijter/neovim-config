@@ -3,7 +3,16 @@
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
-return require('packer').startup(function(use)
+local packer = require('packer')
+packer.util = require('packer.util')
+
+packer.init({
+  git = {
+    clone_timeout = 120
+  }
+})
+
+return packer.startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 

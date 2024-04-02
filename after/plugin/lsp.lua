@@ -9,6 +9,7 @@ lsp.ensure_installed({
   'custom_elements_ls',
   'html',
   'astro',
+  'lua_ls'
 })
 -- Fix Undefined global 'vim'
 lsp.nvim_workspace()
