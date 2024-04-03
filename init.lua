@@ -12,3 +12,10 @@ vim.opt.spell = true
 -- Set the spell language to English US (en_us)
 vim.opt.spelllang = "en_us"
 
+-- Cursor to block
+vim.opt.guicursor = ""
+
+-- capital w saves the file
+vim.cmd([[command! -nargs=0 W write]])
+
+
