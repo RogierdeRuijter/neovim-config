@@ -18,4 +18,3 @@ vim.opt.guicursor = ""
 -- capital w saves the file
 vim.cmd([[command! -nargs=0 W write]])
 
-

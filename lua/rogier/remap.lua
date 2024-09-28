@@ -28,10 +28,17 @@ vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 -- This is going to get me cancelled
 vim.keymap.set("i", "<C-c>", "<Esc>")
+vim.keymap.set("i", "<C-s>", "<Esc>:w<CR>")
+vim.keymap.set("n", "<C-s>", ":w<CR>")
 
 vim.keymap.set("n", "Q", "<nop>")
-vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+-- vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+vim.keymap.set('n', '<C-o>', ':silent !tmux new-window<CR>', { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
+-- add 2 new panes on the right and focus on the top one
+vim.api.nvim_set_keymap('n', '<leader>[', ':silent !tmux split-window -h \\; split-window -v \\; select-pane -U<CR>',
+  { noremap = true, silent = true })
+
 
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
@@ -47,3 +54,6 @@ vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 vim.keymap.set("n", "<leader><leader>", function()
   vim.cmd("so")
 end)
+
+-- remap leader o to closing bracket
+vim.api.nvim_set_keymap('n', '<Leader>o', 'o}<Esc>k0', { noremap = true, silent = true })

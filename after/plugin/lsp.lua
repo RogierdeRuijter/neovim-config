@@ -9,7 +9,10 @@ lsp.ensure_installed({
   'custom_elements_ls',
   'html',
   'astro',
-  'lua_ls'
+  'lua_ls',
+  'graphql',
+  'jsonls',
+  'marksman'
 })
 -- Fix Undefined global 'vim'
 lsp.nvim_workspace()
