@@ -1,4 +1,5 @@
 require("rogier")
+require("rogier.lazy")
 
 vim.api.nvim_command("autocmd BufNewFile *.html 0r ~/.vim/templates/html.skel");
 vim.api.nvim_command("autocmd BufNewFile *.webcomponent.js 0r ~/.vim/templates/webcomponent.skel");
