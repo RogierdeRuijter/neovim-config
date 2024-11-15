@@ -3,16 +3,19 @@ local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
 lsp.ensure_installed({
-  'ts_ls',
-  'eslint',
-  'cssls',
-  'html',
   'astro',
-  'lua_ls',
+  'cssls',
+  'css_variables',
+  'dockerls',
+  'eslint',
   'graphql',
+  'html',
   'jsonls',
-  'marksman'
+  'lua_ls',
+  'marksman',
+  'ts_ls'
 })
+
 -- Fix Undefined global 'vim'
 lsp.nvim_workspace()
 
