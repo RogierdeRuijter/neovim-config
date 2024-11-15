@@ -3,10 +3,9 @@ local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
 lsp.ensure_installed({
-  'tsserver',
+  'ts_ls',
   'eslint',
   'cssls',
-  'custom_elements_ls',
   'html',
   'astro',
   'lua_ls',
@@ -31,11 +30,17 @@ local cmp_action = require('lsp-zero').cmp_action()
 cmp_mappings['<Tab>'] = cmp_action.tab_complete()
 cmp_mappings['<S-Tab>'] = cmp_action.select_prev_or_fallback()
 
-require'lspconfig'.graphql.setup{
+-- This might be used some day to get the workspace references to work
+-- local util = require 'lspconfig.util'
+-- require 'lspconfig'.ts_ls.setup {
+-- root_dir = util.root_pattern('.git'),
+-- }
+
+require 'lspconfig'.graphql.setup {
   filetypes = { "graphql", "javascript", "typescript", "vue" },
 }
 
-require'lspconfig'.astro.setup{}
+require 'lspconfig'.astro.setup {}
 
 lsp.setup_nvim_cmp({
   mapping = cmp_mappings
