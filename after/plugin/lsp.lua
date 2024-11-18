@@ -40,10 +40,10 @@ cmp_mappings['<S-Tab>'] = cmp_action.select_prev_or_fallback()
 -- }
 
 require 'lspconfig'.graphql.setup {
-  filetypes = { "graphql", "javascript", "typescript", "vue" },
+  filetypes = { "astro", "graphql", "javascript", "typescript", "vue" },
 }
 
-require 'lspconfig'.astro.setup {}
+-- require 'lspconfig'.astro.setup {}
 
 lsp.setup_nvim_cmp({
   mapping = cmp_mappings
