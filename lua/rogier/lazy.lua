@@ -36,8 +36,27 @@ return require("lazy").setup({
   'theprimeagen/harpoon',
   'mbbill/undotree',
   'tpope/vim-fugitive',
+  { "mason-org/mason.nvim" },
+  { 'neovim/nvim-lspconfig' },
   {
-    'VonHeikemen/lsp-zero.nvim',
+  -- Core completion plugin
+  "hrsh7th/nvim-cmp",
+
+  -- Completion sources
+  "hrsh7th/cmp-nvim-lsp",
+  "hrsh7th/cmp-buffer",
+  "hrsh7th/cmp-path",
+  "hrsh7th/cmp-cmdline",
+
+  -- Snippet engine (optional but recommended)
+  "L3MON4D3/LuaSnip",
+  "saadparwaiz1/cmp_luasnip",
+
+  -- Snippet collection (optional)
+  "rafamadriz/friendly-snippets",
+},
+  --[[ {
+    'vonheikemen/lsp-zero.nvim',
     branch = 'v2.x',
     dependencies = {
       -- LSP Support
@@ -55,7 +74,7 @@ return require("lazy").setup({
       { 'hrsh7th/cmp-nvim-lsp' }, -- Required
       { 'L3MON4D3/LuaSnip' },     -- Required
     }
-  },
+  }, --]]
   "tpope/vim-surround",
   'sbdchd/neoformat',
   'christoomey/vim-tmux-navigator',

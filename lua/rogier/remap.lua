@@ -10,6 +10,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set('v', '<C-f>', 'y<ESC>:Telescope live_grep default_text=<c-r>0<CR>')
 vim.keymap.set("n", "<leader>vwm", function()
   require("vim-with-me").StartVimWithMe()
 end)
@@ -41,8 +42,8 @@ vim.api.nvim_set_keymap('n', '<leader>[', ':silent !tmux split-window -h \\; spl
   { noremap = true, silent = true })
 
 
-vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
-vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
+vim.keymap.set("n", "<M-k>", "<cmd>cprev<CR>zz")
+vim.keymap.set("n", "<M-j>", "<cmd>cnext<CR>zz")
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 

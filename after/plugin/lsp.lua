@@ -1,3 +1,5 @@
+--[[ 
+
 local lsp = require("lsp-zero")
 
 lsp.preset("recommended")
@@ -33,6 +35,11 @@ local cmp_action = require('lsp-zero').cmp_action()
 cmp_mappings['<Tab>'] = cmp_action.tab_complete()
 cmp_mappings['<S-Tab>'] = cmp_action.select_prev_or_fallback()
 
+
+lsp.setup_nvim_cmp({
+  mapping = cmp_mappings
+})
+
 -- This might be used some day to get the workspace references to work
 -- local util = require 'lspconfig.util'
 -- require 'lspconfig'.ts_ls.setup {
@@ -44,10 +51,6 @@ require 'lspconfig'.graphql.setup {
 }
 
 -- require 'lspconfig'.astro.setup {}
-
-lsp.setup_nvim_cmp({
-  mapping = cmp_mappings
-})
 
 lsp.set_preferences({
   suggest_lsp_servers = false,
@@ -81,3 +84,5 @@ lsp.setup()
 vim.diagnostic.config({
   virtual_text = true
 })
+
+--]]
