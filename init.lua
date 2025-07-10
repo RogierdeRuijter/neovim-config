@@ -21,6 +21,7 @@ vim.cmd([[command! -nargs=0 W write]])
 
 require("mason").setup()
 
+-- Where do the lsp settings come from?
 -- This should be moved somewhere else after a while
 vim.lsp.enable('astro')
  -- 'cssls',
@@ -40,7 +41,7 @@ vim.lsp.enable('luals')
  -- 'marksman',
 vim.lsp.enable('marksman')
  -- 'ts_ls'
--- vim.lsp.enable('typescript-language-server')
+ -- vim.lsp.enable('typescript-language-server')
 vim.lsp.enable('ts_ls')
 
 vim.lsp.config.graphql = {
