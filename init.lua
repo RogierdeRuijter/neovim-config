@@ -71,3 +71,6 @@ end
 vim.lsp.config('*', {
   on_attach = on_attach,
 })
+
+vim.cmd.colorscheme="catppuccin"
+

@@ -8,4 +8,7 @@ Een document om bij te houden wat ik nog moet fixen in mijn setup
     - figure out different between Neoformat and buf.format(). 
         Kan prettier gedraaid worden met buf.format()
 - Package.json workflow is kut
-- Migreer packar naar lazy vim
+- Add command line package die de command line in je beeld laat popen. Deze 
+zit in de lazyvim starter
+
+
