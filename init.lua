@@ -74,3 +74,9 @@ vim.lsp.config('*', {
 
 vim.cmd.colorscheme="catppuccin"
 
+local device_file = vim.fn.stdpath("config") .. "/lua/device.lua"
+local f = io.open(device_file, "r")
+if f ~= nil then
+  io.close(f)       -- close the file after checking
+  dofile(device_file)  -- execute it
+end
