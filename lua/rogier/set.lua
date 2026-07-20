@@ -27,3 +27,15 @@ vim.opt.isfname:append("@-@")
 vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "81"
+
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "markdown", "text" },
+  callback = function()
+    vim.opt_local.wrap = true        -- enable visual wrapping
+    vim.opt_local.linebreak = true   -- wrap at word boundaries
+    vim.opt_local.breakindent = true -- keep indentation nice
+    vim.opt.showbreak = "↪ "
+  end,
+})
+

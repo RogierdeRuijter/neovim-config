@@ -67,3 +67,8 @@ end)
 
 -- remap leader o to closing bracket
 vim.api.nvim_set_keymap('n', '<leader>o', 'o}<Esc>k0', { noremap = true, silent = true })
+
+vim.keymap.set("n", "gd", function()
+  vim.lsp.buf.definition()
+end, { buffer = true })
+

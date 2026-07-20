@@ -19,9 +19,10 @@ vim.keymap.set('n', '<leader>ps', function()
     };
 end)
 
+--[[
 require("telescope").load_extension("git_worktree")
 
 vim.keymap.set('n', '<leader>pw', function()
   telescope.extensions.git_worktree.git_worktrees()
 end)
-
+]]--
